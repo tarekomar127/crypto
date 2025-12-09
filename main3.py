@@ -4,6 +4,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtGui import QFont, QIcon
 from PySide6.QtCore import Qt, QSize
+from rsa_widget import RSAPanel
 
 
 
@@ -214,6 +215,10 @@ class CryptoApp(QWidget):
     def show_layout(self, algo):
         self.clear_layout()
 
+        if algo == "RSA":
+            rsa_panel = RSAPanel()
+            self.content_layout.addWidget(rsa_panel)
+            return
         header = QLabel(algo)
         header.setFont(QFont("Segoe UI", 30, QFont.Bold))
         header.setAlignment(Qt.AlignCenter)
