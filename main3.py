@@ -5,6 +5,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtGui import QFont, QIcon
 from PySide6.QtCore import Qt, QSize
 from rsa_widget import RSAPanel
+from railfence import encrypt_railfence, decrypt_railfence
 
 
 
